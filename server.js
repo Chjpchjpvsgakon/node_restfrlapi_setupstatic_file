@@ -79,7 +79,12 @@ app.get("/", (req, res, next) => {
 
 
 
-//app listen om port
-app.listen(port, () => {
+//app listen om port local
+// app.listen(port, () => {
+//     console.log(`Example app listening on port ${port}`)
+// })
+
+//after deploy to heroku
+app.listen(process.env.PORT, () => {
     console.log(`Example app listening on port ${port}`)
 })
